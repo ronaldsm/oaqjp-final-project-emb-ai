@@ -13,4 +13,7 @@ def emotion_detector(text_to_analyze):
     
     # Make a POST request to the API with the payload and headers
     response = requests.post(url, json=myobj, headers=header)
-    return(response.text)  # Print the response text from the API
+    print(response.status_code)  # Print the HTTP status code of the response
+    print(response.text)  # Print the response text from the API
+
+
