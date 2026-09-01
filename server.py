@@ -20,7 +20,7 @@ def emotion_analyzer_route():
     response = emotion_detector(text_to_analyze)
 
     if response['dominant_emotion'] == "None":
-        return "<b>Invalid text! Please try again!</b>"
+        return "<b>Invalid input! Try again.</b>"
     # Extract the dominant emotion from the response
     dominant_emotion = response['dominant_emotion']
     # Return the dominant emotion as a string
