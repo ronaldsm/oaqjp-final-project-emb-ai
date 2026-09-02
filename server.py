@@ -8,16 +8,16 @@ from EmotionDetection.emotion_detection import emotion_detector
 app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
-def emotion_analyzer_route():
+def emotion_analyser_route():
     ''' 
     This function is the route for the Flask application 
-    to analyze the emotion of the text provided
+    to analyse the emotion of the text provided
     '''
 
-    # Retrieve the text to analyze from the request arguments
-    text_to_analyze = request.args.get('textToAnalyze')
+    # Retrieve the text to analyse from the request arguments
+    text_to_analyse = request.args.get('textToAnalyse')
     # Pass the text to the emotion_detector function and store the response
-    response = emotion_detector(text_to_analyze)
+    response = emotion_detector(text_to_analyse)
 
     if response['dominant_emotion'] == "None":
         return "<b>Invalid input! Try again.</b>"
